@@ -1,0 +1,57 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title" style="font-weight: 300;">Sell Fish</h1>
+    <div class="buttons">
+      <button class="button button-clear ion-ios-close-outline" style="font-size: 30px;color: #5590F6;" ng-click="closeSellItemModal()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="">
+      <div class="list newBatch">
+        <div class="item item-divider" style="background-color: #F3F3F3;font-weight:300;text-align: center;font-size: 13px;">
+              Order Details
+        </div>
+         <label class="item item-input">
+          <span class="input-label">Fish Type</span>
+          <input type="text" ng-model="deliverBatch.fType" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Date/Time</span>
+          <input type="text" ng-model="deliverBatch.date" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Location</span>
+          <input type="text" ng-model="deliverBatch.location" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Quantity</span>
+          <input type="number" min="1" max="{{maxQuantity}}" ng-model="deliverBatch.quantity">
+        </label>
+        <div class="item item-divider" style="background-color: #F3F3F3;font-weight:300;text-align: center;font-size: 13px;">
+              Payment Details
+        </div>
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="deliverBatch.cname">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Credit Card#</span>
+          <input type="number" ng-model="deliverBatch.ccnb">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Expiry Date</span>
+          <input type="number"  ng-model="deliverBatch.edate">
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Code</span>
+          <input type="number"  ng-model="deliverBatch.code">
+        </label>
+        <label class="item" style="padding-left: 30px; padding-right: 30px">
+          <button class="button button-outline button-block button-positive" ng-click="sellItem()">
+                  <span class="ion-ios-redo-outline"></span>&nbsp&nbspSubmit
+                </button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

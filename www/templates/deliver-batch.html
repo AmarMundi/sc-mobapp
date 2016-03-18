@@ -1,0 +1,50 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title" style="font-weight: 300;">Deliver</h1>
+    <div class="buttons">
+      <button class="button button-clear ion-ios-close-outline" style="font-size: 30px;color: #5590F6;" ng-click="closeDeliverBatchModal()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="">
+      <div class="list newBatch">
+        <label class="item item-input">
+          <span class="input-label">Batch Id</span>
+          <input type="text" ng-model="deliverBatch.batchId" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Fish Type</span>
+          <input type="text" ng-model="deliverBatch.fType" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Date/Time</span>
+          <input type="text" ng-model="deliverBatch.date" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Location</span>
+          <input type="text" ng-model="deliverBatch.location" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label" ng-class="(deliverBatch.quality != 'GOOD') ? 'item-alert' : ''">Quality</span>
+          <input type="text" ng-model="deliverBatch.quality" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Quantity</span>
+          <input type="text" ng-model="deliverBatch.quantity" disabled>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Recipient</span>
+          <input type="text" ng-model="deliverBatch.recipient">
+        </label>
+         <label class="item item-input" style="height:130px">
+        <canvas id='signatureCanvas' width='335' height='100' style='border: 1px solid #ccc;'></canvas>
+       </label>
+        <label class="item" style="padding-left: 30px; padding-right: 30px">
+          <button class="button button-outline button-block button-positive" ng-click="deliverBatch()">
+                  <span class="ion-ios-redo-outline"></span>&nbsp&nbspSubmit
+                </button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,37 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title" style="font-weight: 300;">Item Tracker</h1>
+    <div class="buttons">
+      <button class="button button-clear ion-ios-close-outline" style="font-size: 30px;color: #5590F6;" ng-click="closeTrackerModal()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form>
+      <div class="list newBatch">
+
+         <!-- <label class="item item-input" ng-repeat="(key, value) in batchesDetails">
+          <span class="input-label">Fish Type</span>
+          <input type="text" ng-model="deliverBatch.fType" disabled>
+        </label> -->
+        <div class="item item-divider" style="background-color: #F3F3F3;font-weight:300;text-align: center;font-size: 13px;">
+              {{batchItem.type}} - Batch #{{batchItem.id}}
+        </div>
+
+         <a href="#" class="item item-icon-left" href="#" ng-repeat="item in batchTransactions">
+            <i class="icon {{item.avatar}}" style="padding-right:20px" ng-class="(item.ttype == 'UPDATE QUALITY') ? 'item-alert' : 'item-normal'"></i>
+            <div style="margin-left: 10px;">
+                <h2 ng-class="(item.ttype == 'UPDATE QUALITY') ? 'item-desc-alert' : 'item-desc-normal'">{{item.desc}}<span class="item-normal">{{item.owner}}</span></h2>
+                <p style="font-weight: 300;">{{item.date}}</p>
+                <p>{{item.location}}</p>
+            </div>
+        </a>
+
+        <label class="item" style="padding-left: 30px; padding-right: 30px">
+          <button class="button button-outline button-block button-positive" ng-click="closeTrackerModal()">
+                  Close
+          </button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

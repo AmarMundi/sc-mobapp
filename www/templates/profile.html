@@ -1,0 +1,43 @@
+<ion-view animation="none" view-title="Home">
+	<ion-content>
+		<div class="row profile" style="padding: 0px;">
+  			<div class="col" style="padding: 0px;">
+  			
+  				<div class="row" style="padding: 6%;">
+  					<div class="col col-center">
+		  				<div>
+		  					<img src="img/profileAvatar.png" class="avatar" alt="" />
+		  				</div>
+		  				<div class="textline1">JOHN DOE</div>
+		  				<div class="textline2">Shipping & Co</div>
+		  				<div class="textline3">Truck Driver</div>
+		  			</div>
+	  			</div>
+  				
+  				<div class="row profileBar" style="padding: 15px;">
+  					<div class="col col-center"><span class="barIcon ion-ios-box-outline"></span> <span class="barText" id="nbBatches" ng-bind="nbBatchInTruck"></span></div>
+  					<div class="col col-center"><span class="barIcon ion-ios-snowy"></span> <span class="barText" ng-class="(truckTmp>0) ? 'tmp-alert' : ''" ng-show="truckTmp!=null">{{truckTmp}}</span><ion-spinner icon="ripple" ng-show="truckTmp==null"></ion-spinner><span ng-show="truckTmp!=null" ng-class="(truckTmp>0) ? 'tmp-alert' : ''">°C</span></div>
+  				</div>
+			</div>
+		</div>
+		
+		<div class="row" style="padding: 0px; margin-top:0px">
+  			<div class="col col-center" style="padding: 0px;">
+  				<div id="map" data-tap-disabled="true"></div>
+  			</div>
+		</div>
+		
+		<div class="row buttonRow" style="margin-top:0px">
+  			<div class="col col-center" style="padding: 0px;">
+  				<button class="button button-outline button-block button-positive" ng-click="scanQRCode()">
+				  <span class="ion-qr-scanner"></span>&nbsp&nbspScan Package
+				</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
+
+
+ 		<!-- 			<div class="col col-center"><span class="barIcon ion-ios-box-outline"></span> <span span class="barText" id="like">0</span></div>
+  					<div class="col col-center"><img src="img/comment.png" class="barIcon" alt=""/> <span id="comment">0</span></div>
+  					<div class="col col-center"><img src="img/star.png" class="barIcon" alt=""/> <span id="star">0</span></div> -->

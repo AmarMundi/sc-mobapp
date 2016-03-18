@@ -1,0 +1,53 @@
+<ion-view animation="none" view-title="Home">
+	<ion-content>
+		<div class="row rprofile" style="padding: 0px;">
+  			<div class="col" style="padding: 0px;">
+  			
+  				<div class="row" style="padding: 6%;">
+  					<div class="col col-center">
+		  				<div>
+		  					<img src="img/profileRAvatar.png" class="avatar" alt="" />
+		  				</div>
+		  				<div class="textline1">JANE BLACK</div>
+		  				<div class="textline2">Retailer & Co</div>
+		  				<div class="textline3">Merchant</div>
+		  			</div>
+	  			</div>
+  				
+  				<div class="row profileBar" style="padding: 15px;">
+  					<div class="col col-center"><span class="barIcon ion-ios-box-outline"></span> <span span class="barText" id="nbBatches" ng-bind="nbBatchInStore"></span><br>batches</div>
+ <!--  					<div class="col col-center"><span class="barIcon ion-ios-pricetags-outline"></span> <span span class="barText" id="fQuantity" ng-bind="nbItemsInStore"></span><br>fish</div> -->
+  				</div>
+			</div>
+		</div>
+		
+		<div class="row" style="padding: 0px; margin-top:0px">
+  			<div class="col col-center" style="padding: 0px;">
+  				<div id="rmap" data-tap-disabled="true"></div>
+  			</div>
+		</div>
+
+		<div class="row" style="padding: 0px; margin-top:0px">
+  			<div class="col col-center" style="padding: 0px;">
+  				<div class="list">
+  					 <div class="item item-divider" style="background-color: #F3F3F3;font-weight:300;text-align: center;font-size: 13px;">
+					    Fish In Store
+					  </div>
+  					<div class="item" style="font-size:13px;font-weight:300;" ng-repeat="(key, value) in batchesDetails">
+					      <span>{{key}}</span> <span style="float:right;">Qty: {{value}}</span>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+		
+		
+		<div class="row buttonRow" style="margin-top:0px">
+  			<div class="col col-center" style="padding: 0px;">
+  				<button class="button button-outline button-block button-positive" ng-click="scanQRCode()">
+				  <span class="ion-qr-scanner"></span>&nbsp&nbspScan Item
+				</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
