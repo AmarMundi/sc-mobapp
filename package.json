@@ -19,7 +19,9 @@
     "cordova-plugin-console",
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
-    "com.megster.cordova.ble"
+    "cordova-plugin-ble-central",
+    "cordova-plugin-geolocation",
+    "phonegap-plugin-barcodescanner"
   ],
   "cordovaPlatforms": [
     "ios"
